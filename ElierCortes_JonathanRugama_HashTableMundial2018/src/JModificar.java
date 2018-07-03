@@ -34,7 +34,7 @@ public class JModificar extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JModificar(String nombre,String edad, String dni, String fechaNacimiento, String nacionalidad, NodoJugadores aModificar, JTextArea txtMostrar, HashTablePaises lista, String clavePais) {
+	public JModificar(String nombre,String edad, String dni, String fechaNacimiento, String nacionalidad, NodoJugadores aModificar, JTextArea txtMostrar, HashTablePaises lista, String clavePais, String posicionJugador, String claveJugador, String posicionPais) {
 		setTitle("MODIFICAR DATOS DE JUGADOR");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 425, 337);
@@ -141,11 +141,11 @@ public class JModificar extends JFrame {
 				}
 			if (verificacion == true){
 				JOptionPane.showMessageDialog(null, mensaje, "MODIFICACIONES: ", JOptionPane.INFORMATION_MESSAGE);
-				txtMostrar.setText(lista.buscar(clavePais).pais.listaJugadores.buscar(aModificar.jugador.getClave()).jugador.toString());
+				txtMostrar.setText(lista.buscarXPosicion(clavePais, Integer.parseInt(posicionPais)).pais.listaJugadores.buscarXPosicion(aModificar.jugador.getClave(), Integer.parseInt(posicionJugador)).jugador.toString());
 				
 				dispose();
 			}else {
-				JOptionPane.showMessageDialog(null, "Por favor ingrese una MODIFICACIÓN", "ERROR: No hay modificaciones", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Por favor ingrese una MODIFICACIÃ“N", "ERROR: No hay modificaciones", JOptionPane.ERROR_MESSAGE);
 			}
 			
 				
