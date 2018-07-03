@@ -81,7 +81,7 @@ private DefaultListModel modeloClaveJugadores ;
 
 
 	/**
-	 * Inciializa y construye todo lo relacionado a interfaz de usuario, adem·s tiene sus respectivos ActionPerformed que invocan a diferentes mÈtodos esenciales.
+	 * Inciializa y construye todo lo relacionado a interfaz de usuario, adem√°s tiene sus respectivos ActionPerformed que invocan a diferentes m√©todos esenciales.
 	 */
 	public Principal() {
 		setTitle("MUNDIAL RUSIA 2018");
@@ -358,7 +358,7 @@ modeloNombrePais = new DefaultListModel();
 		
 	}
 	/**
-	 * Este mÈtodo funciona para limpiar toda instancia de Jtextfield que este almacenado en el Panel para ingresar los datos de jugadores. Es ˙til para aplicar
+	 * Este m√©todo funciona para limpiar toda instancia de Jtextfield que este almacenado en el Panel para ingresar los datos de jugadores. Es √∫til para aplicar
 	 *  el setText("") individual a cada JTextField. 
 	 * @param Panel Obtieneel panel que contiene los JLabel y Jtextfields de Ingresar jugador
 	 */
@@ -371,10 +371,10 @@ modeloNombrePais = new DefaultListModel();
 	}
 	
 	/**
-	 * Este mÈtodo permite eliminar un jugador en especifico a nivel interno del sistema, es decir, eliminarlo en su tablaHashJugadores
-	 * respectiva, pero adem·s eliminar o remover los datos que se visualizan en los JList correspondiente a jugadores. Es decir, su posiciÛn y su clave.
-	 * Una vez que se eliminan los elementos, gracias a la ayuda de las variables "posiciÛnUtilizada" y "claveUtilizada" (almecenan una lista con los datos utilizados 
-	 * para no tener que recorrer toda la tabla e ir a la posiciÛn especifica). Se usa un for para remover y otro for para actualizar los Jlist al final del mÈtodo.
+	 * Este m√©todo permite eliminar un jugador en especifico a nivel interno del sistema, es decir, eliminarlo en su tablaHashJugadores
+	 * respectiva, pero adem√°s eliminar o remover los datos que se visualizan en los JList correspondiente a jugadores. Es decir, su posici√≥n y su clave.
+	 * Una vez que se eliminan los elementos, gracias a la ayuda de las variables "posici√≥nUtilizada" y "claveUtilizada" (almecenan una lista con los datos utilizados 
+	 * para no tener que recorrer toda la tabla e ir a la posici√≥n especifica). Se usa un for para remover y otro for para actualizar los Jlist al final del m√©todo.
 	 */
 	public void eliminar (){
 		lista.buscar(String.valueOf(listClaves.getSelectedValue())).pais.listaJugadores.eliminar(String.valueOf(listClaveJugadores.getSelectedValue()), Integer.parseInt(String.valueOf(listHashPosJugadores.getSelectedValue())));
@@ -399,18 +399,18 @@ modeloNombrePais = new DefaultListModel();
 		txtMostrar.setText("");
 	}
 	/**
-	 * En caso de que no se haya seleccionado la clave de un paÌs o el nombre de un paÌs, no se podr· ingresar un jugador, porque no se esta
-	 * especificando a cual selecciÛn pertenece. Si se selecciona el paÌs, si se va a permitir ingresar, y se extraeran del os JtextFields los datos que se necesitan
-	 * para llenar el objeto de "jugador" y "datosU" . Cada vez que se invoque este mÈtodo se van a limipiar los modelos de "HashPosJugadores" y "claveJugadores"
-	 * con el fin de verificar si se encuentran en el ArrayList de Datos utilizados y estos puedan ser visualizados con precisiÛn y de forma automatizada.
-	 * @param panelDatosJugador recibe el panel para que una vez ingresados los datos, se puedan eliminar de los Jtextfields con el mÈtodo limpiar()
+	 * En caso de que no se haya seleccionado la clave de un pa√≠s o el nombre de un pa√≠s, no se podr√° ingresar un jugador, porque no se esta
+	 * especificando a cual selecci√≥n pertenece. Si se selecciona el pa√≠s, si se va a permitir ingresar, y se extraeran del os JtextFields los datos que se necesitan
+	 * para llenar el objeto de "jugador" y "datosU" . Cada vez que se invoque este m√©todo se van a limipiar los modelos de "HashPosJugadores" y "claveJugadores"
+	 * con el fin de verificar si se encuentran en el ArrayList de Datos utilizados y estos puedan ser visualizados con precisi√≥n y de forma automatizada.
+	 * @param panelDatosJugador recibe el panel para que una vez ingresados los datos, se puedan eliminar de los Jtextfields con el m√©todo limpiar()
 	 * 
 	 * (otra forma de hacerlo para no declarar la variable global)
 	 * 
 	 */
 	public void ingresar(JPanel panelDatosJugador){
 		if (listClaves.isSelectionEmpty()|| listNombrePais.isSelectionEmpty()) {
-			JOptionPane.showMessageDialog(null, "Seleccione un paÌs ante de ingresar un jugador", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Seleccione un pa√≠s ante de ingresar un jugador", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}else{
 		jugador = new Jugadores ();
 		datosU= new DatosUtilizados();
@@ -440,7 +440,7 @@ modeloNombrePais = new DefaultListModel();
 		}
 	}
 	/**
-	 * Este mÈtodo crea un objeto  de la clase Paises, asigna su respectivo nombre y clave, y aÒade los datos ingresados al mÛdelo de JList con el fin de 
+	 * Este m√©todo crea un objeto  de la clase Paises, asigna su respectivo nombre y clave, y a√±ade los datos ingresados al m√≥delo de JList con el fin de 
 	 * facilitar la busqueda de sus jugadores.
 	 */
 	public void ingresarPais() {
@@ -455,8 +455,8 @@ modeloNombrePais = new DefaultListModel();
    	  txtNombrePais.setText("");
 	}
 	/**
-	 * Este mÈtodo va a permitir mostrar la selecciÛn de cada paÌs, es decir, todos los jugadores que se visualizan en el JList, respecto a cada selecciÛn.
-	 * PAra esto, se hace uso del mÈtodo buscarXPosiciÛn , para que igual, en caso de existir colisiones, no existan problemas a la hora de mostrar y no salgan 
+	 * Este m√©todo va a permitir mostrar la selecci√≥n de cada pa√≠s, es decir, todos los jugadores que se visualizan en el JList, respecto a cada selecci√≥n.
+	 * PAra esto, se hace uso del m√©todo buscarXPosici√≥n , para que igual, en caso de existir colisiones, no existan problemas a la hora de mostrar y no salgan 
 	 * datos repetidos. 
 	 */
 	public void mostrarSeleccion (){
@@ -472,7 +472,7 @@ modeloNombrePais = new DefaultListModel();
 	}
 	
 	/**
-	 * Este mÈtodo se utiliza para modificar un jugador en especifico, en este caso se obtiene el nodo aModificar, con el fin de mandarlo por parametro
+	 * Este m√©todo se utiliza para modificar un jugador en especifico, en este caso se obtiene el nodo aModificar, con el fin de mandarlo por parametro
 	 * al Frame modificar, para que este pueda visualizar los datos especificos de ese nodo buscado, y poder sobrescribirlos en caso de que hayan modificaciones
 	 * en el siguiente frame. 
 	 */
@@ -483,18 +483,20 @@ modeloNombrePais = new DefaultListModel();
 				JOptionPane.showMessageDialog(null, "No se ha encontrado el jugador", "ERROR: Jugador no encontrado", JOptionPane.ERROR_MESSAGE);
 			}else {
 		       String clavePais = String.valueOf(listClaves.getSelectedValue());
-				modificar = new JModificar(aModificar.jugador.getNombre(), aModificar.jugador.getEdad(), aModificar.jugador.getDni(), aModificar.jugador.getFechaNacimiento(), aModificar.jugador.getNacionalidad(), aModificar,  txtMostrar, lista, clavePais);
+		       String posicion = String.valueOf(listHashPosJugadores.getSelectedValue());
+		       String claveJugador= String.valueOf(listClaveJugadores.getSelectedValue());
+				modificar = new JModificar(aModificar.jugador.getNombre(), aModificar.jugador.getEdad(), aModificar.jugador.getDni(), aModificar.jugador.getFechaNacimiento(), aModificar.jugador.getNacionalidad(), aModificar,  txtMostrar, lista, clavePais, posicion, claveJugador, String.valueOf(listHashPos.getSelectedValue()));
        modificar.setVisible(true);				
 			}
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Tiene que seleccionar una clave de un paÌs y jugador", "ERROR", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Tiene que seleccionar una clave de un pa√≠s y jugador", "ERROR", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
 	/**
-	 * Este mÈtodo lo que hace es que una vez seleccionada la clave del jugador, automaticamente selecciona la posiciÛn, y con base a esas selecciones en JList, se busca el nodo especifico
-	 * con la clave seleccionada y con la posiciÛn seleccionada de la tabla de paÌses,, despuÈs se busca en la tabla de jugadores el jugador especifico mediante la clave y la posicion
-	 * para asÌ poder ser mostrado. Pero notese que igual se busca en la tablaHash de paÌses para asÌ ir progresivamente obteniendo los datos necesarios para la busqueda del jugador. 
+	 * Este m√©todo lo que hace es que una vez seleccionada la clave del jugador, automaticamente selecciona la posici√≥n, y con base a esas selecciones en JList, se busca el nodo especifico
+	 * con la clave seleccionada y con la posici√≥n seleccionada de la tabla de pa√≠ses,, despu√©s se busca en la tabla de jugadores el jugador especifico mediante la clave y la posicion
+	 * para as√≠ poder ser mostrado. Pero notese que igual se busca en la tablaHash de pa√≠ses para as√≠ ir progresivamente obteniendo los datos necesarios para la busqueda del jugador. 
 	 */
 	public void mostrarJugadorX(){
 		try {
@@ -507,8 +509,8 @@ modeloNombrePais = new DefaultListModel();
 	}
 	
 	/**
-	 * Este mÈtodo lo que hace es desplegar los valores de JList, con base en los datos utilizados, para asÌ facilitar la visualizaciÛn y la busqueda de los datos ingresados en la tabla de jugadores.
-	 * Entonces, con base en la clave y la posiciÛn hash seleccionada en la tabla paÌses, se van a mostrar los datos de jugadores que contiene esa tabla en especifico. 
+	 * Este m√©todo lo que hace es desplegar los valores de JList, con base en los datos utilizados, para as√≠ facilitar la visualizaci√≥n y la busqueda de los datos ingresados en la tabla de jugadores.
+	 * Entonces, con base en la clave y la posici√≥n hash seleccionada en la tabla pa√≠ses, se van a mostrar los datos de jugadores que contiene esa tabla en especifico. 
 	 */
 	public void desplegarModelosJugadores(){
 		modeloHashPosJugadores.clear();
@@ -526,6 +528,7 @@ modeloNombrePais = new DefaultListModel();
 		
 	}
 	}
+
 
 
 
